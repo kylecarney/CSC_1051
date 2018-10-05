@@ -1,0 +1,21 @@
+//**********************************************************
+//  CashRegisterAlgorithm.txt          Author: Kyle Carney
+//
+//  CSC 1051 Project 2: Cash Register ***                     
+//
+//***********************************************************
+
+variables: cents, quarters, dimes, nickels, pennies
+
+algorithm:
+
+      1. input cents 
+      2. print cents
+      3. print quarters, dimes, nickels, and pennies
+         q = c / 25
+         d = (c - (q * 25)) / 10
+         n = (c - (d * 10 + q * 25)) / 5
+          p = (c - ((q * 25) + (d * 10) + (n * 5)) / 1
+           if p = 1 use "penny"
+            else use "pennies"
+  

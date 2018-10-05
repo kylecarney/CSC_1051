@@ -1,0 +1,37 @@
+variables: doAgain, year, initialInvestment, targetValue, interestRate, balance, interest
+
+algorithm:
+
+doAgain = 1
+year = 1  
+
+while (doAgain = 1)
+
+   print enter initial investment
+   input initial investment
+
+   print enter target value
+   input target value
+
+   print enter interest rate
+   input interest rate
+
+   print starting balance & interest rate
+
+   print table header with "year", "interest", and "balance"
+   
+   interest = initialInvestment * (interestRate / 100)
+   balance = interest + initialInvestment
+   
+   print values for year, interest, and balance
+
+   while (balance < target)
+      year++
+      initialInvestment = balance;
+      interest = initialInvestment * (interestRate/100);
+      balance = interest + balance;
+      print year, interest, and balance
+   
+print do another?
+year = 1
+input yes or no
