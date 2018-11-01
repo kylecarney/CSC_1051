@@ -50,8 +50,8 @@ public class Shoe
    public String toString ()
    {
       NumberFormat fmt = NumberFormat.getCurrencyInstance();
-      return (manufacturer + "\t" + name + "\t" +  SKU +
-              "\t"  + fmt.format(price) + "\t" + likes);
+      return (name + " by " + manufacturer + ", SKU: " +  SKU +
+              " "  + fmt.format(price) + "... " + likes + " likes.");
    }
   //-----------------------------------------------------------------
  //  Price mutator setPrice() sets price
