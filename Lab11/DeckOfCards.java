@@ -8,33 +8,42 @@ import java.util.Random;
 public class DeckOfCards
 {
    public static void main (String[] args) {
-      //declare, instantiate, and initialize array suits
-      String[] suits = {"hearts",	"spades", "diamonds", "clubs"};
-      for (int i=0; i < suits.length; i++)
-         //print suit at each index
-         System.out.println ("suit at index " + i + ": " + suits[i]);
-       //print ****** BREAK *******
-       System.out.println ("********************************************"); 
-       
-      //declare, instantiate, and initialize array ranks
-      String [] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-      for (int i=0; i < ranks.length; i++)
-         //print rank at each index
-         System.out.println ("rank at index " + i + ": " + ranks[i]);
-         
-      //declare and instantiate array of 52 items called deck
-       String[] deck = new String[52];  
-       
-       //print ****** BREAK *******
-       System.out.println ("********************************************"); 
-       //for deck index 0-12 hearts
-       for (int i = 0; i < 13; i++) {
-         deck[i] = ranks[i] + " of " + suits[0];
-         System.out.println ("deck index of " + i + ": " + deck[i]); 
-       //for deck index 13-25 clubs
-         for (i = 13; i < 25; i++) {
-         deck[i] = ranks[i] + " of " + suits[1];
-         System.out.println ("deck index of " + i + ": " + deck[i]); 
-         } 
-         } 
-   }}
+   
+   //suits[] array
+      //declare and instantiate string array suits
+      //initialize hearts, spades, diamonds, clubs
+      String[] suits= {"hearts", "spades", "diamonds", "clubs"};
+      //for loop to print index and name of each suit array element
+      for (int i = 0; i < suits.length; i++) {
+         System.out.println("suit at index " + i + ": " + suits[i]);
+      }
+      //break
+      System.out.println("\n**********************************\n");
+   //ranks[] array
+      //initialize ranks array
+         String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"};
+ 
+      
+      //for loop to print index and name of each rank array element
+      for (int i = 0; i < ranks.length; i++) {
+         System.out.println("rank at index " + i + ": " + ranks[i]);    
+      } 
+         //break
+      System.out.println("\n**********************************\n");
+   //deck[] array
+      //declare and instantiate string array ranks
+      String[] deck = new String[52];
+      //for loop to initialize all cards in deck array
+      int counter = 0;
+      for (int i = 0; i < 13; i++) {
+        deck[i] = "" + ranks[i] + " of " + suits[1]; 
+      }
+      counter++;
+      for (int i = 13; i < 26; i++) {
+        deck[i] = "" + ranks[] + " of " + suits[1]; 
+      }            
+   
+      for (int i = 0; i < deck.length; i++) {           
+         System.out.println("rank at index " + i + ": " + deck[i]);       
+      }
+   } }
