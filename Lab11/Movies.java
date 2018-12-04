@@ -23,7 +23,11 @@ public class Movies
       movies.addDVD ("Casablanca", "Michael Curtiz", 1942, 19.95, false);
       movies.addDVD ("Remember the Titans", "Boaz Yakin", 2000, 19.95, false);
       movies.addDVD ("Wedding Crashers", "David Dobkin", 2005, 19.95, false);
-      movies.addDVD ("The Terminator", "James Cameron", 19984, 15.95, false);
+      movies.addDVD ("The Terminator", "James Cameron", 1984, 15.95, false);
       System.out.println (movies);
+      
+      movies.shuffle();
+      
+      System.out.println(movies);
    }
 }

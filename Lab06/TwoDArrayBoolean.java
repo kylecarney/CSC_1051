@@ -1,11 +1,11 @@
 //********************************************************************
-//  TwoDArrayDouble.java       Author: Lewis/Loftus
+//  TwoDArrayBoolean.java       Author: Kyle Carney
 //
 //  Demonstrates the use of a two-dimensional array.
 //********************************************************************
 import java.lang.Math; 
 
-public class TwoDArrayDouble
+public class TwoDArrayBoolean
 {
    //-----------------------------------------------------------------
    //  Creates a 2D array of integers, fills it with increasing

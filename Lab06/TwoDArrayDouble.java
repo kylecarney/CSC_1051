@@ -1,5 +1,5 @@
 //********************************************************************
-//  TwoDArrayDouble.java       Author: Lewis/Loftus
+//  TwoDArrayDouble.java       Author: Kyle Carney
 //
 //  Demonstrates the use of a two-dimensional array.
 //********************************************************************

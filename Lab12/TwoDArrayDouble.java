@@ -13,7 +13,7 @@ public class TwoDArrayDouble
    //-----------------------------------------------------------------
    public static void main (String[] args)
    {
-      double[][] table = new double[200][200];
+      double[][] table = new double[10][10];
       
       int x = 0;
       int y = 0;

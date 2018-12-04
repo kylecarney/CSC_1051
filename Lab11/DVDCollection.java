@@ -3,8 +3,9 @@
 //
 //  Represents a collection of DVD movies.
 //********************************************************************
-
+import java.lang.Math; 
 import java.text.NumberFormat;
+import java.util.Random;
 
 public class DVDCollection
 {
@@ -31,7 +32,7 @@ public class DVDCollection
    {
       if (count == collection.length)
          increaseSize();
-
+   
       collection[count] = new DVD (title, director, year, cost, bluRay);
       totalCost += cost;
       count++;
@@ -43,19 +44,19 @@ public class DVDCollection
    public String toString()
    {
       NumberFormat fmt = NumberFormat.getCurrencyInstance();
-
+   
       String report = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
       report += "My DVD Collection\n\n";
-
+   
       report += "Number of DVDs: " + count + "\n";
       report += "Total cost: " + fmt.format(totalCost) + "\n";
       report += "Average cost: " + fmt.format(totalCost/count);
-
+   
       report += "\n\nDVD List:\n\n";
-
+   
       for (int dvd = 0; dvd < count; dvd++)
          report += collection[dvd].toString() + "\n";
-
+   
       return report;
    }
 
@@ -66,19 +67,30 @@ public class DVDCollection
    private void increaseSize ()
    {
       DVD[] temp = new DVD[collection.length * 2];
-
+   
       for (int dvd = 0; dvd < collection.length; dvd++)
          temp[dvd] = collection[dvd];
-
+   
       collection = temp;
    }
    //-----------------------------------------------------------------
    //  Shuffle() method that shuffles the DVD order
    //  
    //-----------------------------------------------------------------
-   public void shuffle ()
+   Random random = new Random();
+    
+     public void shuffle ()
    {
-   for (int i = 0; i < 5; i++)
-      a = rand.
+     int a = random.nextInt(10);
+     int b = random.nextInt(10);
+     DVD c = collection[b];
+     for (int i = 0; i < 10; i++)
+     {
+     collection[b] = collection[b];
+     collection[a] = c;
+     }
+        
+      }
    }
-}
+ 
+   
