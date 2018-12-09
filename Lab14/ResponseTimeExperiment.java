@@ -1,39 +1,32 @@
 //*************************************************************
 //  ResponseTimeExperiment.java       Author: Kyle Carney
-//  Project 3
+//  Project 14
 //*************************************************************
 import java.util.Scanner;
 import java.util.Random;
-// Add	an	import directive: import java.io.*;
 import java.io.*;
 
 public class ResponseTimeExperiment
 {
-   // In	the	main	method	heading,	add	throws IOException 
    public static void main(String[] args) throws IOException
    {
-   
    //initialize scanner and random
    Scanner in = new Scanner(System.in);
    Random rand = new Random();
    int numCorrect, i;
    long totalTime;
+   long averageTime;
    // A. NumCorrect = 0
    numCorrect = 0;
    // B. totalTime = 0
    totalTime = 0;
-      
-   
-         //	1.		input	name
-         System.out.print("\nPlease enter your name: ");
-         String name = in.nextLine();
-         // Creates new file with name
-         PrintWriter outFile = new PrintWriter(name + ".txt");       
-      
+       
       // C. Repeat 4 times
       for (i = 0; i < 4; i++)
       {
-      
+         //	1.		input	name
+         System.out.print("\nPlease enter your name: ");
+         String name = in.nextLine();
          //	2.		print	personalized	welcome	message	&	instructions
          System.out.println("Hello " + name 
          + ". Please answer as fast as you can.");	
@@ -45,6 +38,8 @@ public class ResponseTimeExperiment
          int b = rand.nextInt(100);
          //	5.		startTime	=	current	time
          long startTime = System.currentTimeMillis();
+         
+         try {
          //	6.		print	question	using	a,	b
          System.out.print(a + " + " + b + " = ");
          //	7.		input	answer
@@ -59,22 +54,27 @@ public class ResponseTimeExperiment
          long reactionTime = endTime - startTime;
          //D. totalTime = totalTime + reactionTime
          totalTime = totalTime + reactionTime;
-         long averageTime;
+
          //	11. Print	outcome	as	“Correct”	or	“Incorrect”
          System.out.println(outcome == 1 ? "Correct!" : "Incorrect.");
+         }
+         catch (NumberFormatException problem)
+         {
+         file.print("*");
+         System.out.println("FAIL: You were supposed to input a number.");
+         }
          // E. numCorrect = numCorrect + outcome
          numCorrect = numCorrect + outcome;
-         // F.  averageTime = totalTime / 4
-         averageTime = totalTime/4;
-         System.out.println("That took " + reactionTime + " milliseconds");
-         //G. Print average response time
-         System.out.println("\nYour average response time is " + averageTime + " milliseconds.");
-         }
-         //H. Print number correct
-         System.out.println("You answered " + numCorrect + " total questions correct!");
-         // 12. Print Goodbye
-         System.out.println("\nThank you, goodbye.");  
-      
+      // F.  averageTime = totalTime / 4
+      averageTime = totalTime/4;
+      System.out.println("That took " + reactionTime + " milliseconds");
+      //G. Print average response time
+      System.out.println("\nYour average response time is " + averageTime + " milliseconds.");
+      }
+      //H. Print number correct
+      System.out.println("You answered " + numCorrect + " total questions correct!");
+      // 12. Print Goodbye
+      System.out.println("\nThank you, goodbye.");  
     
  }
 } 

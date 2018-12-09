@@ -23,7 +23,7 @@ public class FileInput
 
       // Read and process each line of the file
       while (fileScan.hasNext())
-      {
+      {+
          line = fileScan.nextLine();
          if (line.toUpperCase().contains("AIR"))
          {

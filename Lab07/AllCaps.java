@@ -34,5 +34,6 @@ public class AllCaps
           System.out.print(" vowel.");
       else 
          System.out.print(" vowels.");  
+         
  }   
 }
