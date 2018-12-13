@@ -1,13 +1,14 @@
 //********************************************************************
-//  TwoDArrayInputFromFile.java       Author: Kyle Carney
+//  Project10.java       Author: Kyle Carney
 //
-//  Demonstrates how to use input from text files into a 2D array
+//  Demonstrates how to analyze real social network data sets
+//   using 2D arrays and create output files
 //********************************************************************
 import java.lang.Math; 
 import java.util.Scanner;
 import java.io.*;
 
-public class TwoDArrayInputFromFile
+public class Project10
 {
    //-----------------------------------------------------------------
    //  Creates a 2D array of integers, fills it with increasing
