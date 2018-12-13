@@ -16,10 +16,7 @@ public class Matches
    String file1 = args[0];
    String file2 = args[1];
    // 2. print message to user with the values of size and the first file name obtained
-    System.out.println("Size of args is " + args.length + " and first file is: " + args[0]);
- 
-
-   
+    System.out.println("Size of args is " + args.length + ", and first file is: " + args[0]);
    // 3. instantiate a square 2D array of boolean, using size as the number of rows and cols
    
    // 4. input pairs of values from the file until the end of file; for each pair [ x y ], 
