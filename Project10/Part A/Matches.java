@@ -48,27 +48,9 @@ public class Matches
                          "Now processing values to find matches.");
        for (int i = 0; i < table.length; i++)
        {
-         System.out.print("test");
+         //System.out.print("test");
        }
-      //String one = args[0]; 
-     // String two = args[1]; 
-      
-      //int x = Integer.parseInt(one);	
-     // int y = Integer.parseInt(two);	
-      
-      
-     // boolean [][]table =  new int[size][size];
-      
-      
-    //  System.out.println(args[0] + args[1] args[2]); 
-      
-        // Read and process each line of the file
-      //  while (fileScan.hasNext())
-      //  {
-       //    line = fileScan.nextLine();
-     //      System.out.println (line.toUpperCase());
-      //  }
-      
+    
       // close file
       outFile.close();
                 
